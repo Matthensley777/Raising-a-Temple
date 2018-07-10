@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2010
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Raising a Temple", "Raising a Temple\Raising a Temple.csproj", "{9271561F-D836-4161-B5DE-904B59BB9BF9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9271561F-D836-4161-B5DE-904B59BB9BF9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9271561F-D836-4161-B5DE-904B59BB9BF9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9271561F-D836-4161-B5DE-904B59BB9BF9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9271561F-D836-4161-B5DE-904B59BB9BF9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {51E47CA6-E94D-426A-9AB9-D3D493E2EAC7}
+	EndGlobalSection
+EndGlobal
