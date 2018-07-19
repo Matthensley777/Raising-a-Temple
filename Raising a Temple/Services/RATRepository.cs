@@ -1,17 +1,29 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
+using System.Data.SqlClient;
 using System.Linq;
-using System.Web;
-using System.Web.Mvc;
+using Dapper;
+using Raising_a_Temple.Models;
 
-namespace Raising_a_Temple.Services
+namespace MyHumidor.Services
 {
-    public class RATRepository : Controller
+    public class RATRepository
     {
-        // GET: RATRepository
-        public ActionResult Index()
+        private static SqlConnection GetConnection()
         {
-            return View();
+            return new SqlConnection(ConfigurationManager.ConnectionStrings["RaisingATemple"].ConnectionString);
         }
-    }
-}
+
+        public bool Create(RATDto rat)
+        {
+            using (var db = GetConnection())
+            {
+
+
+                db.Open();
+                var add = db.Execute();
+
+                return add == 1;
+            }
+        }

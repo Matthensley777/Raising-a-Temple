@@ -2,17 +2,25 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
-using System.Web.Mvc;
+using System.Net;
+using System.Net.Http;
+using System.Web.Http;
 
-namespace Raising_a_Temple.Controllers
+
+namespace MyHumidor.Controllers
 {
-    public class RATController : Controller
+    [RoutePrefix("api/cigars")]
+    public class RATController : ApiController
     {
-        // GET: RAT
-        public ActionResult Index()
+        [Route, HttpGet]
+        public HttpResponseMessage GetList()
         {
-            return View();
+            var repository = new RATRepository();
+            var result = repository.ListAllCigars();
+
+            return Request.CreateResponse(HttpStatusCode.OK, result);
         }
-        //test
+
+       
     }
 }
